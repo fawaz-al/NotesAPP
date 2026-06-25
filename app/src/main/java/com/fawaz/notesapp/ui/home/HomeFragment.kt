@@ -74,15 +74,16 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener {
     }
 
     private fun showEmptyDataLayout(data: List<Notes>) {
-        when(data.isEmpty()) {
-            true -> {
-                binding.rvHome.visibility = View.INVISIBLE
-                binding.imgNoNotes.visibility = View.VISIBLE
-            }
-            else -> {
-                binding.rvHome.visibility = View.VISIBLE
-                binding.imgNoNotes.visibility = View.INVISIBLE
-            }
+        if (data.isEmpty()) {
+            // Data KOSONG: Munculkan gambar & tombol, Sembunyikan RecyclerView
+            binding.rvHome.visibility = View.GONE
+            binding.imgNoNotes.visibility = View.VISIBLE
+            binding.btnToDetail.visibility = View.VISIBLE
+        } else {
+            // Data ADA: Tampilkan RecyclerView, Sembunyikan gambar & tombol
+            binding.rvHome.visibility = View.VISIBLE
+            binding.imgNoNotes.visibility = View.GONE
+            binding.btnToDetail.visibility = View.GONE
         }
     }
 
