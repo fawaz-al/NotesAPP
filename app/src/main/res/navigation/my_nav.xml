@@ -24,6 +24,13 @@
             app:exitAnim="@anim/to_right"
             app:popEnterAnim="@anim/from_right"
             app:popExitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_homeFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/addFragment"
@@ -73,4 +80,9 @@
             android:name="currentItem"
             app:argType="com.fawaz.notesapp.data.entity.Notes" />
     </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.fawaz.notesapp.ui.game.GameFragment"
+        android:label="Game"
+        tools:layout="@layout/fragment_game" />
 </navigation>

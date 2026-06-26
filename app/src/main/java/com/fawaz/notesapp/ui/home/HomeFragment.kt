@@ -58,6 +58,10 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener {
             findNavController().navigate(R.id.action_homeFragment_to_addFragment)
         }
 
+        binding.fabGame.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_gameFragment)
+        }
+
         setupRecycleView()
     }
 

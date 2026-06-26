@@ -52,6 +52,19 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:contentDescription="@string/content_fab_add_notes" />
+        
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_three_dots"
+            android:backgroundTint="@color/black"
+            android:tint="@color/white"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toTopOf="@id/fab_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/content_fab_game_notes"/>
 
         <Button
             android:id="@+id/btn_to_detail"
